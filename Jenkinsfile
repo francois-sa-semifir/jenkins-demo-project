@@ -17,10 +17,10 @@ pipeline {
 
         stage('Utiliser autreFonction') {
             steps {
-                // Appel direct de 'autreFonction' SANS 'script {}'
-                // C'est une étape globale de la Shared Library, elle est "directement disponible"
-                def resultat = autreFonction("Ceci est un test de fonction globale.")
-                echo "Résultat de autreFonction : ${resultat}"
+                script {
+                    def resultat = autreFonction("Ceci est un test de fonction globale.")
+                    echo "Résultat de autreFonction : ${resultat}"
+                }
             }
         }
 
