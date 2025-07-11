@@ -30,7 +30,7 @@
                         monEtapePersonnalisee {
                             echo "Ceci est le contenu du bloc passé à monEtapePersonnalisee."
                             echo "On peut même appeler une fonction de la Shared Library ici :"
-                            org.exemple.utils.MonUtilitaire.saluer(this, "De l'intérieur de l'étape personnalisée")
+                            org.exemple.utils.MonUtilitaire.saluer(this, "De l'interieur de l'etape personnalisee")
                         }
                     }
                 }
