@@ -17,12 +17,10 @@ pipeline {
 
         stage('Utiliser autreFonction') {
             steps {
-                // 'def resultat = ...' est une déclaration de variable Groovy,
-                // et l'appel de 'autreFonction' est une étape que l'on veut capturer dans une variable.
-                script {
-                    def resultat = autreFonction("Ceci est un test de fonction globale.")
-                    echo "Résultat de autreFonction : ${resultat}"
-                }
+                // Appel direct de 'autreFonction' SANS 'script {}'
+                // C'est une étape globale de la Shared Library, elle est "directement disponible"
+                def resultat = autreFonction("Ceci est un test de fonction globale.")
+                echo "Résultat de autreFonction : ${resultat}"
             }
         }
 
