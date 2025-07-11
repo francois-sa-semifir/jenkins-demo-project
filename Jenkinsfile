@@ -17,10 +17,9 @@ pipeline {
 
         stage('Utiliser autreFonction') {
             steps {
-                script { // Ajoutons un script block ici aussi pour être cohérent et éviter d'autres surprises
-                    def resultat = autreFonction("Ceci est un test de fonction globale.")
-                    echo "Résultat de autreFonction : ${resultat}"
-                }
+                // Appel direct de 'autreFonction' sans 'script {}'
+                def resultat = autreFonction("Ceci est un test de fonction globale.")
+                echo "Résultat de autreFonction : ${resultat}"
             }
         }
 
